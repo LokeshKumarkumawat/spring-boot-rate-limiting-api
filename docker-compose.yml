@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  mysql-datasource:
+    image: mysql:8
+    container_name: mysql-datasource
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: rateLimiting
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user123
+    networks:
+      - rate-limiter
+
+networks:
+  rate-limiter:
+    driver: bridge
