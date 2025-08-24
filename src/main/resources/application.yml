@@ -1,0 +1,10 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: rate-limiting
+  datasource:
+    url: ${MYSQL_URL:jdbc:mysql://mysql-datasource:3306/rateLimiting}
+    username: ${MYSQL_USERNAME:user}
+    password: ${MYSQL_PASSWORD:user123}
+    driver-class-name: com.mysql.cj.jdbc.Driver
